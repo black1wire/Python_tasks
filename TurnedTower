@@ -1,0 +1,16 @@
+entr = int(input('Enter your number: '))
+step = 0
+floors = 0
+rooms = 0
+dors_from_left = 0
+
+if 1 <= entr <= 2000000000:
+    while rooms < entr:
+        step += 1
+        for i in range(step):
+            floors += 1
+
+            for dors_from_left in range(step):
+                rooms += 1
+                if rooms == entr:
+                    print(f'Floor: {floors}\nroom: {dors_from_left+1}')
